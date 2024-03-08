@@ -1,0 +1,53 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Controller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .button {
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 9px #999;
+        }
+        .button-on {
+            background-color: #4CAF50;
+        }
+        .button-on:hover {
+            background-color: #45a049;
+        }
+        .button-off {
+            background-color: #f44336;
+        }
+        .button-off:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+    <form action="/turn_on" method="post">
+        <button class="button button-on" type="submit">Turn LED ON</button>
+    </form>
+    <form action="/turn_off" method="post">
+        <button class="button button-off" type="submit">Turn LED OFF</button>
+    </form>
+</body>
+</html>
